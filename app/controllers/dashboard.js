@@ -21,4 +21,13 @@ export default class DashboardController extends Controller {
     });
     return totalBudget;
   }
+
+  //To get the top five prospects with highest budget
+  get topFiveProspects() {
+    let topFiveProspects = [];
+    for (let i = 0; i <= 4; i++) {
+      topFiveProspects.push(this.sortedCustomers[i]);
+    }
+    return topFiveProspects;
+  }
 }
