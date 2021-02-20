@@ -21,76 +21,42 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="customerFirstName">First name</label>
-                <Input
-                  @type="text"
-                  @class="form-control"
-                  @id="customerFirstName"
-                  @required={{true}}
-                  @value={{this.model.firstName}}
-                />
+                <Input @type="text" @class="form-control" @id="customerFirstName" @required={{true}}
+                  @value={{this.model.firstName}} />
               </div>
               <div class="form-group col-md-6">
                 <label for="customerLastName">Last name</label>
-                <Input
-                  @type="text"
-                  @class="form-control"
-                  @id="customerLastName"
-                  @required={{true}}
-                  @value={{this.model.lastName}}
-                />
+                <Input @type="text" @class="form-control" @id="customerLastName" @required={{true}}
+                  @value={{this.model.lastName}} />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-7">
                 <label for="customerEmailAddress">Email</label>
-                <Input
-                  @type="text"
-                  @class="form-control"
-                  @id="customerEmailAddress"
-                />
+                <Input @type="text" @class="form-control" @id="customerEmailAddress" @required={{true}}
+                  @value={{this.model.emailAddress}} />
               </div>
               <div class="form-group col-md-5">
                 <label for="customerPhoneNumber">Phone Number</label>
-                <Input
-                  @type="tel"
-                  @class="form-control"
-                  @id="customerPhoneNumber"
-                  placeholder="(555) 555-5555"
-                  @required={{true}}
-                  @value={{this.model.phoneNumber}}
-                />
+                <Input @type="tel" @class="form-control" @id="customerPhoneNumber" placeholder="(555) 555-5555"
+                  @required={{true}} @value={{this.model.phoneNumber}} />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="customerCompany">Company</label>
-                <Input
-                  @type="text"
-                  @class="form-control"
-                  @id="customerCompany"
-                  @required={{true}}
-                  @value={{this.model.company}}
-                />
+                <Input @type="text" @class="form-control" @id="customerCompany" @required={{true}}
+                  @value={{this.model.company}} />
               </div>
               <div class="form-group col-md-4">
                 <label for="customerProject">Project</label>
-                <Input
-                  @type="text"
-                  @class="form-control"
-                  @id="customerProject"
-                  @required={{true}}
-                  @value={{this.model.project}}
-                />
+                <Input @type="text" @class="form-control" @id="customerProject" @required={{true}}
+                  @value={{this.model.project}} />
               </div>
               <div class="form-group col-md-4">
                 <label for="customerBudget">Budget</label>
-                <Input
-                  @type="text"
-                  @class="form-control"
-                  @id="customerBudget"
-                  @required={{true}}
-                  @value={{this.model.budget}}
-                />
+                <Input @type="text" @class="form-control" @id="customerBudget" @required={{true}}
+                  @value={{this.model.budget}} />
               </div>
             </div>
             <button type="submit" class="btn btn-info">Save changes</button>

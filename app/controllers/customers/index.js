@@ -1,12 +1,12 @@
-import Controller from '@ember/controller';
-import { action } from '@ember/object';
-import { sort } from '@ember/object/computed';
-import { tracked } from '@glimmer/tracking';
+import Controller from "@ember/controller";
+import { action } from "@ember/object";
+import { sort } from "@ember/object/computed";
+import { tracked } from "@glimmer/tracking";
 
 export default class CustomersIndexController extends Controller {
-  @tracked sortProperty = 'lastName';
+  @tracked sortProperty = "fullName";
 
-  @sort('model', 'customersSortProps')
+  @sort("model", "customersSortProps")
   sortedCustomers;
 
   get customersSortProps() {
@@ -15,6 +15,10 @@ export default class CustomersIndexController extends Controller {
 
   @action
   updateSortProperty(event) {
-    this.sortProperty = event.target.value
+    this.sortProperty = event.target.value;
+    //To sort descending for budget
+    if (this.sortProperty === "budget") {
+      this.sortedCustomers.reverse();
+    }
   }
 }
