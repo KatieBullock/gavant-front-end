@@ -9,7 +9,12 @@ export default class CustomersModel extends Model {
   @attr("number") budget;
 
   //To sort by last name and first name
-  get fullName() {
+  get sortedFullName() {
     return `${this.lastName}, ${this.firstName}`;
+  }
+
+  //To get full name
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
   }
 }

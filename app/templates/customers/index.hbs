@@ -6,7 +6,8 @@
     </h5>
     <div>
       <select class="form-control" {{on "change" this.updateSortProperty}}>
-        <option value="fullName" selected={{eq this.sortProperty "fullName" }}>
+        {{!-- To sort by last name and then first name in the table --}}
+        <option value="sortedFullName" selected={{eq this.sortProperty "sortedFullName" }}>
           Sort by name
         </option>
         <option value="budget" selected={{eq this.sortProperty "budget" }}>

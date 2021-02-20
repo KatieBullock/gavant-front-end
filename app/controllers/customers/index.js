@@ -4,7 +4,7 @@ import { sort } from "@ember/object/computed";
 import { tracked } from "@glimmer/tracking";
 
 export default class CustomersIndexController extends Controller {
-  @tracked sortProperty = "fullName";
+  @tracked sortProperty = "sortedFullName";
 
   @sort("model", "customersSortProps")
   sortedCustomers;
