@@ -1,8 +1,10 @@
-<label>
-  <span>Search customers</span>
-  {{!-- To update the query in the component class based on user input --}}
-  <Input @value={{this.query}} />
-</label>
+<div class="searchWrapper">
+  <div class="search">
+    {{!-- To update the query in the component class based on user input --}}
+    <Input @value={{this.query}} type="text" class="searchTerm" placeholder="Search customers" />
+  </div>
+</div>
+
 <div class="card">
   {{!-- To access the model of this.sortedCustomers called customers in customers/index.hbs and component filter to find
   results --}}
