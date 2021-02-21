@@ -6,11 +6,12 @@ export default class CustomersFilterComponent extends Component {
     let { model, query } = this.args;
 
     if (query) {
+      let queryString = query.toLowerCase();
       model = model.filter(
         (customer) =>
-          customer.company.includes(query) ||
-          customer.fullName.includes(query) ||
-          customer.project.includes(query)
+          customer.company.toLowerCase().includes(queryString) ||
+          customer.fullName.toLowerCase().includes(queryString) ||
+          customer.project.toLowerCase().includes(queryString)
       );
     }
 
