@@ -8,15 +8,3 @@
   padding-bottom: 15px;
   width: 40%;
 }
-
-.searchTerm {
-  padding: 5px;
-  width: 100%;
-  border: 3px solid $purple;
-  border-radius: $border-radius;
-  outline: none;
-}
-
-.searchTerm:focus {
-  color: $purple;
-}
