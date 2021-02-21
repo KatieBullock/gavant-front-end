@@ -16,7 +16,13 @@
       </select>
     </div>
   </div>
+  {{!-- To use customers component and name this.sortedCustomers model customers --}}
+  <Customers @customers={{this.sortedCustomers}} />
+  {{!-- <label>
+    <span>Search customers</span>
+    <input>
+  </label>
   <div class="card">
     <CustomersTable @model={{this.sortedCustomers}} />
-  </div>
+  </div> --}}
 </Page::Content>

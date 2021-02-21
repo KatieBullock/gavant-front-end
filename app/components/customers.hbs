@@ -1,0 +1,13 @@
+<label>
+  <span>Search customers</span>
+  {{!-- To update the query in the component class based on user input --}}
+  <Input @value={{this.query}} />
+</label>
+<div class="card">
+  {{!-- To access the model of this.sortedCustomers called customers in customers/index.hbs and component filter to find
+  results --}}
+  <Customers::Filter @model={{@customers}} @query={{this.query}} as |results|>
+    {{!-- To use the results to populate the table --}}
+    <CustomersTable @model={{results}} />
+  </Customers::Filter>
+</div>
