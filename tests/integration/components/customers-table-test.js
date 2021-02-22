@@ -1,17 +1,18 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
+import { render } from "@ember/test-helpers";
+import { hbs } from "ember-cli-htmlbars";
 
-module('Integration | Component | customers-table', function(hooks) {
+module("Integration | Component | customers-table", function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-    this.set('model', []);
+  hooks.beforeEach(function () {
+    this.set("model", []);
+  });
+
+  test("it renders a table", async function (assert) {
     await render(hbs`<CustomersTable @model={{this.model}} />`);
 
-    assert.ok(this.element.textContent);
+    assert.dom("table tbody tr").exists({ count: this.model.length });
   });
 });

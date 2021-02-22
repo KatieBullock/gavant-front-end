@@ -1,26 +1,18 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
+import { render } from "@ember/test-helpers";
+import { hbs } from "ember-cli-htmlbars";
 
-module('Integration | Component | dashboard-table', function(hooks) {
+module("Integration | Component | dashboard-table", function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  hooks.beforeEach(function () {
+    this.set("model", []);
+  });
 
-    await render(hbs`<DashboardTable />`);
+  test("it renders a table", async function (assert) {
+    await render(hbs`<DashboardTable @model={{this.model}} />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <DashboardTable>
-        template block text
-      </DashboardTable>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom("table").exists();
   });
 });
